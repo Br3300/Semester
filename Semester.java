@@ -12,7 +12,7 @@ public class Semester
 
     public static void main(String []args)
     {
-    	int choice1, annoy=0, choice2, choice3, choice4; 														//Ints for the first part of game
+    	int choice1, annoy=0, choice2, choice3, choice4, choice5, sheild=0; 														//Ints for the first part of game
     	Scanner scan = new Scanner(System.in);
     	System.out.println("Enter your characters name: (Male name reccomended)");
     	String name = scan.nextLine();
@@ -152,7 +152,7 @@ public class Semester
    				}
    				//
    				//FINISH AREA ABOVE AND CONTINuE
-
+   		}
 
       	while (choice1==2)
       		{
@@ -179,24 +179,50 @@ public class Semester
 					System.out.println("serving of oats. \n\nAs darkness falls, will you make a fire for warmth and protection?");
 					System.out.println("\nMake the fire (Hit 1) \nDon't make the fire (Hit 2)");
 					choice3=scan.nextInt();
-				}
-				while (choice2==2){
-					System.out.println("After deciding not to risk the cold or the threat of wildlife,  you gather your flint, steel, and nearby wood to");
-					System.out.println("make a fire. Exhausted from the events of the day, you quickly fall asleep.");
-					System.out.println("You wake to the feeling something is off. Not yet rising, you strain your ears against the quiet crackle of the ");
-					System.out.println("dying fire next to you. You pick up the sound of hushed voices and clumsy feet over leaves. Still feigning sleep,");
-					System.out.println("Do you:\n\nAttempt to grab your crossbow(Hit 1)\nAttempt to grab your sword (Hit 2)");
-					choice3=scan.nextInt();
+					
+					while (choice3==1)
+					{
+						System.out.println("After deciding not to risk the cold or the threat of wildlife,  you gather your flint, steel, and nearby wood to");
+						System.out.println("make a fire. Exhausted from the events of the day, you quickly fall asleep.");
+						System.out.println("You wake to the feeling something is off. Not yet rising, you strain your ears against the quiet crackle of the ");
+						System.out.println("dying fire next to you. You pick up the sound of hushed voices and clumsy feet over leaves. Still feigning sleep,");
+						System.out.println("Do you:\n\nAttempt to grab your crossbow(Hit 1)\nAttempt to grab your sword (Hit 2)");
+						choice3=scan.nextInt();
 
-					while (choice3==1){
-						System.out.println("After rolling quickly rolling over, you grab your crossbow and point it towards the voices. You see two figures stop");
-						System.out.println("at the edge of your camp. Identifying them as guards, they stop their advance and");  //Finish this part
+						while (choice4==1){
+							System.out.println("After rolling quickly rolling over, you grab your crossbow and point it towards the voices. You see two figures stop");
+							System.out.println("at the edge of your camp. Identifying them as guards, they stop their advance and raise their hands in surrender. However,");
+							System.out.println("after realizing your crossbow wasn't loaded, they advance. You turn to run, but are shot with a bow before escaping.");
+							System.out.println("as they drag your dying body, you hear them mutter something about the queen being pleased with your capture.");
+							System.out.pritnln("After loosing counciousness, you never again awake. Good game! better luck next time."); 
+							System.exit(0);
+						}
+						while (choice4==2){
+							System.out.println("You roll over and grab your sword. As you rise you see two guards start charging towards you. In Panic, you swing your");
+							System.out.println("sword with all your strength. The first guard raises his sheild, blocking the blow. The force behind the blow and his ");
+							System.out.println("momentum from running knock him over, falling into the fire. He lets out a scream as the leather of his armor catches ");
+							System.out.println("fire. The second guard takes an overhead swing at you. You leap back, tripping over a stump. As you land on your back ");
+							System.out.println("the guard advances to deliver a killing blow. You swing your sword from the ground, connecting with his ankle. As he falls")"
+							System.out.println("to the ground, you scramble to your feet and grab your gear. Stoping breifly to take the fallen sheild, you mount your horse");
+							System.out.println("and continue riding.\n\nPulling out the compass, you continue to ride as the sun rises over the trees.");	
+							sheild++;
+							choice5=1;					
+								}
+						
 					}
 					while (choice3==2){
-
+						System.out.println("As you continue to ride your horse through the night, you see a cozy tavern nestled among the trees. Nearing exaustion, you ");
+						System.out.println("throw caution to the wind. Tying your horse, you enter the tavern. \nintstantly greeted with plesant smells and warmth, you ");
+						System.out.println("see an old man behind the bar, polishing a glass. \n\"It's been a while since I've seen a customer\" his voice is a deep rumble that vibrates through your chest.");
+						System.out.println("Your eyes struggling to stay open, he points to the first room on the right.\n\"Get some rest.\" he says \"We can talk buisness in the morning/");
+						System.out.println("You stumble into the room, falling asleep almost as soon as you touch the bed.");
+						System.out.println("When you finally reawake, you feel completely refreshed. After exiting the room, you see the man still behind the counter. he hands you a plate")		//Pick up here
 					}
+				
+					}
+				while (choice2==2){
+					
 				}
    			 }
-}
 }
 }
