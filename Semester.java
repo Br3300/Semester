@@ -1,7 +1,7 @@
 /**
  * @(#)Semester.java
  *
- *
+ *UPLOAD TO FILE J
  * @Brysen
  * @version 1.00 2018/12/19
  */
@@ -12,7 +12,7 @@ public class Semester
 
     public static void main(String []args)
     {
-    	int choice1, annoy=0, choice2, choice3, choice4, choice5, sheild=0; 														//Ints for the first part of game
+    	int choice1, annoy=0, choice2, choice3, choice4, choice5, sheild=0, neck=0, winLose=0; 														//Ints for the first part of game
     	Scanner scan = new Scanner(System.in);
     	System.out.println("Enter your characters name: (Male name reccomended)");
     	String name = scan.nextLine();
@@ -151,7 +151,7 @@ public class Semester
    					System.out.println("at the basement you never knew existed.");
    				}
    				//
-   				//FINISH AREA ABOVE AND CONTINuE
+   				//FINISH AREA ABOVE AND CONTINuE make sure to add a magic necklace neck=1**
    		}
 
       	while (choice1==2)
@@ -202,7 +202,7 @@ public class Semester
 							System.out.println("sword with all your strength. The first guard raises his sheild, blocking the blow. The force behind the blow and his ");
 							System.out.println("momentum from running knock him over, falling into the fire. He lets out a scream as the leather of his armor catches ");
 							System.out.println("fire. The second guard takes an overhead swing at you. You leap back, tripping over a stump. As you land on your back ");
-							System.out.println("the guard advances to deliver a killing blow. You swing your sword from the ground, connecting with his ankle. As he falls")"
+							System.out.println("the guard advances to deliver a killing blow. You swing your sword from the ground, connecting with his ankle. As he falls");
 							System.out.println("to the ground, you scramble to your feet and grab your gear. Stoping breifly to take the fallen sheild, you mount your horse");
 							System.out.println("and continue riding.\n\nPulling out the compass, you continue to ride as the sun rises over the trees.");	
 							sheild++;
@@ -211,17 +211,49 @@ public class Semester
 						
 					}
 					while (choice3==2){
-						System.out.println("As you continue to ride your horse through the night, you see a cozy tavern nestled among the trees. Nearing exaustion, you ");
+						System.out.println("After much thought you decide to avoid drawing attention and don't make a fire. You finish setting up your bed for the night");
+						System.out.println("and drift off.\n\nFrom the depths of your slumber you hear a quite rumble. Stiring into consciousness you see glowing eyes staring at you");
+						System.out.println("from the trees. \nDo your run? (hit 1) \nor do you grab your sword? (hit 2)");
+						choice4=scan.nextInt();
+					}
+						while (choice4==1){
+							System.out.println("As you turn to mount your horse you're instantly brought to the ground by a wolf.");
+							if (neck==1) {
+								System.out.println("Your necklace burns hot against your chest and the wolf is thrown off of you. You quickly grab the sword on the ground and turn");
+								System.out.println("to face the trees. You see a pack of wolves charging you. You fend off the majority, the necklace growing warm and throwing back");
+								System.out.println("That get past your edge. After the battle ends, you stop to catch your breath. Looking down, you see the necklace has burned itself");
+								System.out.println("away, leaving nothing but a fresh burn mark on your collar. Weary, you mount your horse again, fearful of another attempt at sleep.");
+								neck--;
+								choice5=1;
+							}
+							else{
+								System.out.println("Turning, you wrestle the bear off of you. Quickly grabbing your sword, you face the wolves.");
+								winLose	= (int)(Math.random()*2)+1;
+								if (winLose==1){
+									System.out.println("Valiently fighting, the wolves overwhelm you. fight until too hurt to go on. \nEventually you fall over an your quest ends.");
+									System.out.prinntln("Better luck next time!");
+									System.exit(0);
+								}
+								else if (winLose==2){
+									System.out.println("Wolf after wolf charges you. Each time your blade barely saves you. After defending yourself from half a dozen wolves, the");
+									System.out.println("the remaining few look at your panting body with hesitation. Half a second later, they turn and retreat. You colapse from ");
+									System.out.println("Exaustion. After regaining counciousness, you gather your gear and mount your horse to continue your journey.");
+									choice5=1;
+								}
+							}
+							
+						}
+						while (choice4==2){
+							System.out.println("You turn to face the glowing eyes. As you bring your sword up, a pack of gremlins charge out from the trees."); //COntinue here
+						}
+					}
+				while (choice2==2){
+					System.out.println("As you continue to ride your horse through the night, you see a cozy tavern nestled among the trees. Nearing exaustion, you ");
 						System.out.println("throw caution to the wind. Tying your horse, you enter the tavern. \nintstantly greeted with plesant smells and warmth, you ");
 						System.out.println("see an old man behind the bar, polishing a glass. \n\"It's been a while since I've seen a customer\" his voice is a deep rumble that vibrates through your chest.");
 						System.out.println("Your eyes struggling to stay open, he points to the first room on the right.\n\"Get some rest.\" he says \"We can talk buisness in the morning/");
 						System.out.println("You stumble into the room, falling asleep almost as soon as you touch the bed.");
-						System.out.println("When you finally reawake, you feel completely refreshed. After exiting the room, you see the man still behind the counter. he hands you a plate")		//Pick up here
-					}
-				
-					}
-				while (choice2==2){
-					
+						System.out.println("When you finally reawake, you feel completely refreshed. After exiting the room, you see the man still behind the counter. he hands you a plate of food")
 				}
    			 }
 }
